@@ -1,0 +1,34 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\vincent\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Program Files\Git\mingw32\bin;C:\Program Files\Git\usr\bin;C:\Users\vincent\bin;C:\Program Files\Git\mingw32\bin;C:\Program Files\Git\usr\bin;C:\Users\vincent\bin;C:\Program Files\Git\mingw32\bin;C:\Program Files\Git\usr\bin;C:\Users\vincent\bin;C:\Program Files\Git\mingw32\bin;C:\Program Files\Git\usr\bin;C:\Users\vincent\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\PostgreSQL\10\bin;C:\Users\vincent\AppData\Roaming\npm;C:\Users\vincent\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.0
+
+Platform: 
+  win32 ia32
+
+Trace: 
+  SyntaxError: Unknown token: { line: 2, col: 1, type: 'INVALID', value: undefined } 2:1 in C:\Users\vincent\.yarnrc
+      at Parser.unexpected (C:\Users\vincent\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:64230:11)
+      at Parser.parse (C:\Users\vincent\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:64361:14)
+      at parse (C:\Users\vincent\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:64433:19)
+      at module.exports.exports.default (C:\Users\vincent\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:63997:96)
+      at YarnRegistry.<anonymous> (C:\Users\vincent\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:96002:64)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\vincent\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:304:30)
+      at C:\Users\vincent\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:315:13
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

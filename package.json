@@ -1,0 +1,37 @@
+{
+  "name": "andela",
+  "version": "1.0.0",
+  "description": "Andela's Fast Food Fast app redo with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClintPy/Fast-Food-Fast-Nodejs.git"
+  },
+  "keywords": [
+    "Fast",
+    "Food",
+    "Fast",
+    "App",
+    "Nodejs"
+  ],
+  "author": "Clint Dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClintPy/Fast-Food-Fast-Nodejs/issues"
+  },
+  "homepage": "https://github.com/ClintPy/Fast-Food-Fast-Nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.9",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0",
+    "env-cmd": "^9.0.3"
+  }
+}
