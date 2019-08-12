@@ -1,10 +1,15 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-// require('./src/db');
+const cors = require('cors');
+const orderRoute = require('./routes/orders');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(cors());
+
+// Orders route
+app.use('/orders', orderRoute);
 
 app.get('/', (req,res) => {
     res.send("This is Home Page");
