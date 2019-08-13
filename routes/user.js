@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
-const pool = require('../src/db');
+var pool = require('../src/db');
+
+if ( process.env.NODE_ENV === 'test' ) { 
+  pool = require('../src/db_test');  
+}
 
 const getUser = (request, response) => {
   pool.query('SELECT * FROM users', (error, results) => {
