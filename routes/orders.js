@@ -18,7 +18,7 @@ const addOrder = (request, response) => {
       if (error) {
         throw error
       }
-      response.status(201).send(`User added with ID: ${results.rows[0]}`)
+      response.status(201).send(`Order added with ID: ${results.rows[0]}`)
     })
   }
 
@@ -44,7 +44,7 @@ const updateOrder = (request, response) => {
         if (error) {
           throw error
         }
-        response.status(200).send(`User modified with ID: ${id}`)
+        response.status(200).send(`Order modified with ID: ${id}`)
       }
     )
 }
@@ -56,7 +56,7 @@ const deleteOrder = (request, response) => {
       if (error) {
         throw error
       }
-      response.status(200).send(`User deleted with ID: ${id}`)
+      response.status(200).send(`Order deleted with ID: ${id}`)
     })
 }
 
