@@ -31,7 +31,34 @@ const getOrderById = (request, response) => {
         }
         response.status(200).json(results.rows)
     })
-    }  
+    }
+
+const updateOrder = (request, response) => {
+    const id = parseInt(request.params.id)
+    const { name, price, quantity, status } = request.body
+
+    pool.query(
+      'UPDATE orders SET name = $1, price = $2, quantity = $3, status = $4 WHERE order_id = $5',
+      [name, price, quantity, status, id],
+      (error, results) => {
+        if (error) {
+          throw error
+        }
+        response.status(200).send(`User modified with ID: ${id}`)
+      }
+    )
+}
+
+const deleteOrder = (request, response) => {
+    const id = parseInt(request.params.id)
+
+    pool.query('DELETE FROM orders WHERE order_id = $1', [id], (error, results) => {
+      if (error) {
+        throw error
+      }
+      response.status(200).send(`User deleted with ID: ${id}`)
+    })
+}
 
 app
     .route('/')
@@ -42,7 +69,11 @@ app
 
 app
     .route('/:id')
-    // GET endpoint
+    // GET by ID endpoint
     .get(getOrderById)
+    // PUT Eendpoint
+    .put(updateOrder)
+    // DELETE Endpoint
+    .delete(deleteOrder)
 
 module.exports = app;
