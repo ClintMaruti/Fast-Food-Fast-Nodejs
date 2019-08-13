@@ -22,11 +22,27 @@ const addOrder = (request, response) => {
     })
   }
 
+const getOrderById = (request, response) => {
+    const id = parseInt(request.params.id)
+
+    pool.query('SELECT * FROM orders WHERE order_id = $1', [id], (error, results) => {
+        if (error) {
+        throw error
+        }
+        response.status(200).json(results.rows)
+    })
+    }  
+
 app
-  .route('/')
-  // GET endpoint
-  .get(getOrders)
+    .route('/')
+    // GET endpoint
+    .get(getOrders)
     // POST endpoint
     .post(addOrder)
-  
+
+app
+    .route('/:id')
+    // GET endpoint
+    .get(getOrderById)
+
 module.exports = app;
